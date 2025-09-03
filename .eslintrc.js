@@ -3,6 +3,9 @@ module.exports = {
   settings: {
     'import/resolver': {
       typescript: {},
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.svg'],
+      },
     },
   },
   extends: ['plugin:prettier/recommended', 'prettier'],
@@ -14,7 +17,7 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'error',
 
     // Imports
-    'import/no-unresolved': 'off',
+    'import/no-unresolved': ['error', { ignore: ['\\.svg$'] }],
     'import/no-named-as-default': 'off',
     'import/export': 'warn',
 
@@ -33,8 +36,22 @@ module.exports = {
     'import/order': [
       'error',
       {
-        groups: ['builtin', 'external', 'parent', 'sibling', 'index'],
+        groups: [
+          'builtin',
+          'external',
+          'parent',
+          'sibling',
+          'index',
+          ['object', 'type'],
+        ],
         'newlines-between': 'always',
+        pathGroups: [
+          {
+            pattern: '**/*.svg',
+            group: 'object',
+            position: 'after',
+          },
+        ],
         alphabetize: {
           order: 'asc',
           caseInsensitive: true,
