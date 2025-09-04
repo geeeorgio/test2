@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 
-const PlaceScreen = () => {
+const CustomTabBar = () => {
   return (
     <View>
-      <Text>PlaceScreen</Text>
+      <Text>CustomTabBar</Text>
     </View>
   );
 };
 
-export default PlaceScreen;
+export default CustomTabBar;
 
 const styles = StyleSheet.create({});

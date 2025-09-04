@@ -1,0 +1,48 @@
+import {
+  createStackNavigator,
+  StackNavigationProp,
+} from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+export type OnboardingParamsList = {
+  SplashScreen: undefined;
+  OnboardingScreen: undefined;
+  OnboardingScreen1: undefined;
+  OnboardingScreen2: undefined;
+  OnboardingScreen3: undefined;
+};
+
+export type OnboardingNavigationProp = StackNavigationProp<
+  OnboardingParamsList,
+  'SplashScreen'
+>;
+
+export const OnboardingStack = createStackNavigator<OnboardingParamsList>();
+
+export type MainTabsStackParamsList = {
+  HomeScreen: undefined;
+  FactsScreen: undefined;
+  MapScreen: undefined;
+  PlaceScreen: undefined;
+  SavedScreen: undefined;
+  InfoScreen: undefined;
+};
+
+export type MainStackProp = StackNavigationProp<
+  MainTabsStackParamsList,
+  'HomeScreen'
+>;
+
+export const MainTabs = createBottomTabNavigator<MainTabsStackParamsList>();
+
+export type RootStackParamsList = {
+  OnboardingStack: undefined;
+  MainTabs: undefined;
+};
+
+export type RootStackNavigationProp = StackNavigationProp<
+  RootStackParamsList,
+  'OnboardingStack'
+>;
+
+export const RootStack = createStackNavigator<RootStackParamsList>();
