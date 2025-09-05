@@ -12,10 +12,10 @@ const RootNavigator = () => {
           cardStyle: { backgroundColor: 'transparent' },
         }}
       >
-        <RootStack.Screen
+        {/* <RootStack.Screen
           name="OnboardingStack"
           component={OnboardingNavigator}
-        />
+        /> */}
         <RootStack.Screen name="MainTabs" component={MainTabsNavigator} />
       </RootStack.Navigator>
     </Layout>

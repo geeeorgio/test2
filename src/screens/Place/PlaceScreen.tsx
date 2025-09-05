@@ -3,7 +3,7 @@ import React from 'react';
 
 const PlaceScreen = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>PlaceScreen</Text>
     </View>
   );
@@ -11,4 +11,6 @@ const PlaceScreen = () => {
 
 export default PlaceScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: { flex: 1 },
+});

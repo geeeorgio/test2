@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import { MainTabs } from 'src/types/navigation';
 
+import CustomTabBar from 'src/components/ui/CustomTabBar';
 import FactsScreen from 'src/screens/Facts/FactsScreen';
 import HomeScreen from 'src/screens/Home/HomeScreen';
 import InfoScreen from 'src/screens/Info/InfoScreen';
@@ -16,13 +17,14 @@ const MainTabsNavigator = () => {
         headerShown: false,
         tabBarShowLabel: false,
       }}
+      tabBar={(props) => <CustomTabBar {...props} />}
     >
       <MainTabs.Screen name="HomeScreen" component={HomeScreen} />
-      <MainTabs.Screen name="FactsScreen" component={FactsScreen} />
-      <MainTabs.Screen name="MapScreen" component={MapScreen} />
       <MainTabs.Screen name="PlaceScreen" component={PlaceScreen} />
+      <MainTabs.Screen name="FactsScreen" component={FactsScreen} />
       <MainTabs.Screen name="SavedScreen" component={SavedScreen} />
       <MainTabs.Screen name="InfoScreen" component={InfoScreen} />
+      <MainTabs.Screen name="MapScreen" component={MapScreen} />
     </MainTabs.Navigator>
   );
 };

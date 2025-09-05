@@ -1,11 +1,10 @@
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {
   createStackNavigator,
   StackNavigationProp,
 } from '@react-navigation/stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 export type OnboardingParamsList = {
-  SplashScreen: undefined;
   OnboardingScreen: undefined;
   OnboardingScreen1: undefined;
   OnboardingScreen2: undefined;
@@ -14,7 +13,7 @@ export type OnboardingParamsList = {
 
 export type OnboardingNavigationProp = StackNavigationProp<
   OnboardingParamsList,
-  'SplashScreen'
+  'OnboardingScreen'
 >;
 
 export const OnboardingStack = createStackNavigator<OnboardingParamsList>();

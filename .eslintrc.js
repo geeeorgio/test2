@@ -36,22 +36,9 @@ module.exports = {
     'import/order': [
       'error',
       {
-        groups: [
-          'builtin',
-          'external',
-          'parent',
-          'sibling',
-          'index',
-          ['object', 'type'],
-        ],
+        groups: ['builtin', 'external', 'parent', 'sibling', 'index'],
         'newlines-between': 'always',
-        pathGroups: [
-          {
-            pattern: '**/*.svg',
-            group: 'object',
-            position: 'after',
-          },
-        ],
+
         alphabetize: {
           order: 'asc',
           caseInsensitive: true,
