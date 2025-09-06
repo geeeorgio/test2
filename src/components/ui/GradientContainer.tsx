@@ -1,5 +1,5 @@
-import { StyleProp, StyleSheet, ViewStyle } from 'react-native';
 import React, { ReactNode } from 'react';
+import { StyleProp, StyleSheet, ViewStyle } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { COLORS } from 'src/constants/colors';
 
@@ -8,7 +8,7 @@ interface GradientContainerProps {
   extraStyle?: StyleProp<ViewStyle>;
   start?: { x: number; y: number };
   end?: { x: number; y: number };
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 const GradientContainer = ({
@@ -33,5 +33,7 @@ const GradientContainer = ({
 export default GradientContainer;
 
 const styles = StyleSheet.create({
-  gradientContainer: { borderRadius: 22 },
+  gradientContainer: {
+    borderRadius: 22,
+  },
 });

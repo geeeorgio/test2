@@ -21,7 +21,6 @@ export const OnboardingStack = createStackNavigator<OnboardingParamsList>();
 export type MainTabsStackParamsList = {
   HomeScreen: undefined;
   FactsScreen: undefined;
-  MapScreen: undefined;
   PlaceScreen: undefined;
   SavedScreen: undefined;
   InfoScreen: undefined;
@@ -37,6 +36,7 @@ export const MainTabs = createBottomTabNavigator<MainTabsStackParamsList>();
 export type RootStackParamsList = {
   OnboardingStack: undefined;
   MainTabs: undefined;
+  MapScreen: undefined;
 };
 
 export type RootStackNavigationProp = StackNavigationProp<

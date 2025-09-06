@@ -1,7 +1,7 @@
 import Layout from 'src/components/layout/Layout';
+import MapScreen from 'src/screens/Map/MapScreen';
 import { RootStack } from 'src/types/navigation';
 import MainTabsNavigator from './MainTabsNavigator';
-import OnboardingNavigator from './OnboardingNavigator';
 
 const RootNavigator = () => {
   return (
@@ -18,6 +18,7 @@ const RootNavigator = () => {
         /> */}
         <RootStack.Screen name="MainTabs" component={MainTabsNavigator} />
       </RootStack.Navigator>
+      <RootStack.Screen name="MapScreen" component={MapScreen} />
     </Layout>
   );
 };

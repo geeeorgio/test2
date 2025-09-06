@@ -8,4 +8,7 @@ export const COLORS = {
   accent: '#E0BC46',
 
   gradient: ['#020B65', '#0416CB'],
+
+  semiTransparentWhite: 'rgba(255, 255, 255, 0.09)',
+  maxTransparentWhite: 'rgba(255, 255, 255, 0.04)',
 };

@@ -11,17 +11,27 @@ interface IconsProps {
 
 const CustomIcon = ({
   name,
-  width = 30,
-  height = 30,
+  width = 24,
+  height = 24,
   stroke = COLORS.white,
   fill = COLORS.white,
 }: IconsProps) => {
-  const SelectedIcon = ICONS[name];
+  const iconData = ICONS[name];
+  if (!iconData) return;
 
-  if (!SelectedIcon) return null;
+  const IconComponent = iconData.component;
+
+  if (iconData.type === 'fill') {
+    return <IconComponent width={width} height={height} fill={fill} />;
+  }
 
   return (
-    <SelectedIcon width={width} height={height} stroke={stroke} fill={fill} />
+    <IconComponent
+      width={width}
+      height={height}
+      stroke={stroke}
+      strokeWidth={2}
+    />
   );
 };
 

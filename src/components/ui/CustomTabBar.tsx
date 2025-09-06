@@ -1,9 +1,11 @@
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
+import { PlatformPressable } from '@react-navigation/elements';
 import React from 'react';
-import { Pressable, StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { COLORS } from 'src/constants/colors';
+import { IconNames } from 'src/constants/icons';
 import CustomIcon from '../ui/CustomIcon';
 import GradientContainer from './GradientContainer';
-import { IconNames } from 'src/constants/icons';
 
 const CustomTabBar = ({
   state,
@@ -11,82 +13,88 @@ const CustomTabBar = ({
   navigation,
 }: BottomTabBarProps) => {
   return (
-    <View style={styles.tabBarContainer}>
-      <GradientContainer extraStyle={[styles.tabBarGradient]}>
-        <View style={styles.tabBarContent}>
-          {state.routes.map((route, index) => {
-            const { options } = descriptors[route.key];
-            const isFocused = state.index === index;
+    <GradientContainer extraStyle={styles.gradientWrapper}>
+      <View style={styles.tabBarContent}>
+        {state.routes.map((route, index) => {
+          const { options } = descriptors[route.key];
+          const isFocused = state.index === index;
+          const name = route.name as IconNames;
 
-            const name = route.name as IconNames;
+          const onPress = () => {
+            const event = navigation.emit({
+              type: 'tabPress',
+              target: route.key,
+              canPreventDefault: true,
+            });
 
-            const onPress = () => {
-              const event = navigation.emit({
-                type: 'tabPress',
-                target: route.key,
-                canPreventDefault: true,
-              });
+            if (!isFocused && !event.defaultPrevented) {
+              navigation.navigate(route.name, route.params);
+            }
+          };
 
-              if (!isFocused && !event.defaultPrevented) {
-                navigation.navigate(route.name, route.params);
-              }
-            };
+          const onLongPress = () => {
+            navigation.emit({
+              type: 'tabLongPress',
+              target: route.key,
+            });
+          };
 
-            const onLongPress = () => {
-              navigation.emit({
-                type: 'tabLongPress',
-                target: route.key,
-              });
-            };
-
-            return (
-              <Pressable
-                key={route.key}
-                onPress={onPress}
-                onLongPress={onLongPress}
-                style={styles.button}
-                accessibilityRole="button"
-                accessibilityState={{ selected: isFocused }}
-                accessibilityLabel={options.tabBarAccessibilityLabel}
-              >
-                <CustomIcon name={name} width={30} height={30} />
-              </Pressable>
-            );
-          })}
-        </View>
-      </GradientContainer>
-    </View>
+          return (
+            <PlatformPressable
+              key={route.key}
+              onPress={onPress}
+              onLongPress={onLongPress}
+              style={[styles.btn, isFocused && styles.active]}
+              accessibilityRole="button"
+              accessibilityState={{ selected: isFocused }}
+              accessibilityLabel={options.tabBarAccessibilityLabel}
+            >
+              <CustomIcon
+                name={name}
+                width={30}
+                height={30}
+                stroke={isFocused ? COLORS.primaryDark : COLORS.white}
+                fill={isFocused ? COLORS.primaryDark : COLORS.white}
+              />
+            </PlatformPressable>
+          );
+        })}
+      </View>
+    </GradientContainer>
   );
 };
 
 export default CustomTabBar;
 
 const styles = StyleSheet.create({
-  tabBarContainer: {
+  gradientWrapper: {
     position: 'absolute',
-    bottom: 20,
-    left: 20,
-    right: 20,
-  },
-  tabBarGradient: {
-    width: '100%',
-    height: '100%', // Заполняем родительский tabBarContainer
-    borderRadius: 22,
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingHorizontal: 20,
+    bottom: 28,
+    left: 26,
+    right: 26,
   },
   tabBarContent: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    width: '100%',
-    height: '100%',
-  },
-  button: {
     flex: 1,
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 10,
+    padding: 30,
+  },
+  btn: {
+    padding: 17,
+    borderRadius: 15,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  active: {
+    backgroundColor: COLORS.accent,
+    shadowColor: COLORS.black,
+    shadowOffset: {
+      width: 1,
+      height: 7,
+    },
+    shadowOpacity: 0.44,
+    shadowRadius: 16,
+    elevation: 7,
   },
 });
