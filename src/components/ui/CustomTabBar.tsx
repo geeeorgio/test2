@@ -69,9 +69,9 @@ export default CustomTabBar;
 const styles = StyleSheet.create({
   gradientWrapper: {
     position: 'absolute',
-    bottom: 28,
-    left: 26,
-    right: 26,
+    bottom: 0,
+    left: 7,
+    right: 7,
   },
   tabBarContent: {
     flex: 1,
@@ -88,13 +88,14 @@ const styles = StyleSheet.create({
   },
   active: {
     backgroundColor: COLORS.accent,
-    shadowColor: COLORS.black,
+    shadowColor: COLORS.shadow,
     shadowOffset: {
-      width: 1,
-      height: 7,
+      width: 0,
+      height: 15,
     },
     shadowOpacity: 0.44,
-    shadowRadius: 16,
-    elevation: 7,
+    shadowRadius: 7,
+
+    elevation: 10,
   },
 });

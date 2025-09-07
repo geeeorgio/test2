@@ -11,4 +11,6 @@ export const COLORS = {
 
   semiTransparentWhite: 'rgba(255, 255, 255, 0.09)',
   maxTransparentWhite: 'rgba(255, 255, 255, 0.04)',
+
+  shadow: '#000000',
 };

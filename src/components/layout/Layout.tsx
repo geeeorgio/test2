@@ -13,9 +13,7 @@ const Layout = ({ children }: LayoutProps) => {
       resizeMode="cover"
       style={styles.image}
     >
-      <SafeAreaView style={styles.container} edges={['top', 'bottom']}>
-        {children}
-      </SafeAreaView>
+      <SafeAreaView style={styles.container}>{children}</SafeAreaView>
     </ImageBackground>
   );
 };
@@ -25,6 +23,7 @@ export default Layout;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingHorizontal: 19,
   },
   image: {
     flex: 1,
