@@ -10,17 +10,14 @@ interface GuidePannelProps {
 
 const GuidePannel = ({ children }: GuidePannelProps) => {
   return (
-    <View>
+    <View style={styles.container}>
       <Image
         style={styles.guideImg}
         source={require('../../assets/images/ASSISTANT2.png')}
         resizeMode="cover"
       />
-      <GradientContainer extraStyle={styles.guideWrapper}>
-        <CustomText extraStyle={styles.guide}>Your guide</CustomText>
-        <CustomText extraStyle={[styles.guide, styles.guideTransparent]}>
-          Your guide
-        </CustomText>
+
+      <View style={styles.content}>
         {children ? (
           children
         ) : (
@@ -34,6 +31,18 @@ const GuidePannel = ({ children }: GuidePannelProps) => {
             resizeMode="cover"
           />
         </View>
+      </View>
+
+      <GradientContainer extraStyle={styles.guideWrapper}>
+        <View style={styles.transparentWrapper}>
+          <CustomText extraStyle={styles.guide}>Your guide</CustomText>
+          <CustomText extraStyle={[styles.guide, styles.guideTransparent]}>
+            Your guide
+          </CustomText>
+          <CustomText extraStyle={[styles.guide, styles.guideMaxTransparent]}>
+            Your guide
+          </CustomText>
+        </View>
       </GradientContainer>
     </View>
   );
@@ -42,18 +51,55 @@ const GuidePannel = ({ children }: GuidePannelProps) => {
 export default GuidePannel;
 
 const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+  },
   guideImg: {
-    position: 'absolute',
-    left: 2,
-    top: -44,
-    width: 220,
-    height: 326,
+    width: 208,
+    height: 288,
     transform: [{ rotateY: '180deg' }],
     borderBottomLeftRadius: 28,
-    zIndex: 111,
+    zIndex: 1,
+  },
+  content: {
+    flex: 1,
+    justifyContent: 'space-between',
+    alignItems: 'stretch',
+    marginBottom: 16,
+    gap: 8,
+    paddingRight: 17,
+  },
+  text: {
+    textAlign: 'right',
+    fontSize: 24,
+    fontWeight: 500,
+  },
+  logoWrapper: {
+    alignItems: 'flex-end',
+    shadowColor: COLORS.shadow,
+    shadowOffset: {
+      width: 1,
+      height: 10,
+    },
+    shadowOpacity: 0.44,
+    shadowRadius: 7,
+
+    elevation: 10,
+  },
+  logoImg: {
+    width: 66,
+    height: 66,
+    borderRadius: 22,
   },
   guideWrapper: {
-    marginTop: 84,
+    position: 'absolute',
+    top: 84,
+    width: '100%',
+  },
+  transparentWrapper: {
+    paddingTop: 20,
+    paddingBottom: 8,
   },
   guide: {
     color: COLORS.semiTransparentWhite,
@@ -61,39 +107,11 @@ const styles = StyleSheet.create({
     fontSize: 48,
     textAlign: 'center',
     textTransform: 'uppercase',
-    paddingHorizontal: 17,
-    paddingTop: 20,
   },
   guideTransparent: {
-    position: 'absolute',
-    top: 50,
-    left: 5,
+    color: COLORS.transparentWhite,
+  },
+  guideMaxTransparent: {
     color: COLORS.maxTransparentWhite,
-  },
-  text: {
-    alignSelf: 'flex-end',
-    fontSize: 24,
-    paddingRight: 17,
-    fontWeight: 500,
-    marginBottom: 8,
-  },
-  logoWrapper: {
-    alignSelf: 'flex-end',
-    marginBottom: 16,
-    paddingRight: 16,
-    shadowColor: COLORS.shadow,
-    shadowOffset: {
-      width: 0,
-      height: 7,
-    },
-    shadowOpacity: 0.44,
-    shadowRadius: 5,
-
-    elevation: 7,
-  },
-  logoImg: {
-    width: 66,
-    height: 66,
-    borderRadius: 22,
   },
 });

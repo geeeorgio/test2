@@ -10,7 +10,13 @@ module.exports = {
   },
   extends: ['plugin:prettier/recommended', 'prettier'],
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'prettier', 'import', 'react-hooks'],
+  plugins: [
+    '@typescript-eslint',
+    'prettier',
+    'import',
+    'react-hooks',
+    'simple-import-sort',
+  ],
   rules: {
     // React hooks
     'react-hooks/rules-of-hooks': 'error',
@@ -20,6 +26,32 @@ module.exports = {
     'import/no-unresolved': ['error', { ignore: ['\\.svg$'] }],
     'import/no-named-as-default': 'off',
     'import/export': 'warn',
+
+    'simple-import-sort/imports': [
+      'error',
+      {
+        groups: [
+          // Node.js modules
+          ['^(os|path|fs|child_process)$'],
+
+          // packages
+          ['^react', '^@?\\w'],
+
+          // current project directories ('../../')
+          ['^src/'],
+          ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+
+          ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
+
+          // SVG
+          ['\\.svg$'],
+
+          // styles
+          ['^.+\\.s?css$'],
+        ],
+      },
+    ],
+    'simple-import-sort/exports': 'error',
 
     // Shadow variables
     'no-shadow': 'off',
@@ -31,20 +63,6 @@ module.exports = {
 
     // Consistent imports
     '@typescript-eslint/consistent-type-imports': 'error',
-
-    // Import order
-    'import/order': [
-      'error',
-      {
-        groups: ['builtin', 'external', 'parent', 'sibling', 'index'],
-        'newlines-between': 'always',
-
-        alphabetize: {
-          order: 'asc',
-          caseInsensitive: true,
-        },
-      },
-    ],
   },
   globals: {
     JSX: true,

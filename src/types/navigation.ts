@@ -37,6 +37,7 @@ export type RootStackParamsList = {
   OnboardingStack: undefined;
   MainTabs: undefined;
   MapScreen: undefined;
+  PlaceDetailScreen: { id: string };
 };
 
 export type RootStackNavigationProp = StackNavigationProp<

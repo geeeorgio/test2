@@ -69,7 +69,7 @@ export default CustomTabBar;
 const styles = StyleSheet.create({
   gradientWrapper: {
     position: 'absolute',
-    bottom: 0,
+    bottom: 28,
     left: 7,
     right: 7,
   },

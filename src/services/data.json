@@ -1,0 +1,122 @@
+[
+  {
+    "id": "chateau-margaux-1",
+    "name": "Château Margaux",
+    "coordinates": {
+      "latitude": 45.041,
+      "longitude": -0.6686
+    },
+    "rating": 1,
+    "description": "Located in the Médoc region, Château Margaux is one of the most famous wineries in France. Its majestic palace and manicured vineyards are impressive from afar. It produces premium wines with a predominance of Cabernet Sauvignon, which are matured in oak barrels and maintain a delicate balance of tannins and aromas. Tourists can enjoy tours, tastings and walks among the vineyards, where the history of winemaking comes to life in every detail.",
+    "interestingFact": "In the 19th century, Château Margaux was nicknamed the \"Versailles of the Médoc\" due to its architectural grandeur and sophistication.",
+    "imageUrl": "../../assets/images/places/ChâteauMargaux.png"
+  },
+  {
+    "id": "domaine-de-la-romanee-conti-2",
+    "name": "Domaine de la Romanée-Conti",
+    "coordinates": {
+      "latitude": 47.194,
+      "longitude": 4.9503
+    },
+    "rating": 1,
+    "description": "This winery in Burgundy is known for producing the most expensive wine in the world. Small vineyards, cultivated with the utmost attention to detail, produce wines with unparalleled texture and aroma. Production is limited, and each bottle becomes a collector's item. Travelers can see the vineyards that have become legends and feel the spirit of tradition passed down from generation to generation.",
+    "interestingFact": "Some bottles of Romanée-Conti have sold at auction for over $500,000.",
+    "imageUrl": "../../assets/images/places/DomainedelaRomanéeConti.png"
+  },
+  {
+    "id": "chateau-d-yquem-3",
+    "name": "Château d’Yquem",
+    "coordinates": {
+      "latitude": 44.529,
+      "longitude": -0.338
+    },
+    "rating": 5,
+    "description": "The Sauternes region produces the world's best sweet white wine. Château d’Yquem is known for its unique grape harvesting technique, where the grapes are specially subjected to “noble rot” to obtain a rich and complex taste. The palace with towers and panoramic views of the vineyards create a unique atmosphere. Tourists can taste wines with honey and fruit notes that have been maturing for decades.",
+    "interestingFact": "Château d’Yquem is the only producer to have received the status of Premier Cru Supérieur in the 1855 classification.",
+    "imageUrl": "../../assets/images/places/Châteaud’Yquem.png"
+  },
+  {
+    "id": "chateau-pape-clament-4",
+    "name": "Château Pape Clément",
+    "coordinates": {
+      "latitude": 44.7929,
+      "longitude": -0.6444
+    },
+    "rating": 5,
+    "description": "This winery in Pessac-Léonard is one of the oldest in Bordeaux, with a history of over 700 years. The combination of traditional methods and modern technologies creates wines with deep structure and exquisite aromas. The estate is surrounded by manicured gardens, and the interiors of the castle are striking in their richness of decor. They offer tastings, cooking classes, and even wine dinners.",
+    "funFact": "Château Pape Clément was founded by the archbishop who later became Pope Clement V.",
+    "imageUrl": "../../assets/images/places/ChâteauPapeClément.png"
+  },
+  {
+    "id": "chateau-mouton-rothschild-5",
+    "name": "Château Mouton Rothschild",
+    "coordinates": {
+      "latitude": 45.1996,
+      "longitude": -0.7572
+    },
+    "rating": 5,
+    "description": "A famous winery in the Médoc region, known not only for its wines, but also for the unique labels that are created each year by famous artists. They combine innovation and tradition, creating wines with a powerful aroma of black berries and spices. The tour includes a visit to the wine cellars and a private art collection.",
+    "funFact": "Among the authors of the labels of Château Mouton Rothschild were Picasso, Dali, and Chagall.",
+    "imageUrl": "../../assets/images/places/ChâteauMouton.png"
+  },
+  {
+    "id": "chateau-haut-brion-6",
+    "name": "Château Haut-Brion",
+    "coordinates": {
+      "latitude": 44.8061,
+      "longitude": -0.6065
+    },
+    "rating": 5,
+    "description": "Located on the outskirts of Bordeaux, this chateau produces wines with rich textures and complex aromas. Haut-Brion is known for its special microclimate and soils, which give the wines a unique character. The winery combines ancient architecture with modern production technologies, and tours here are held in an intimate atmosphere.",
+    "funFact": "Château Haut-Brion was the first Bordeaux wine officially exported to England in the 17th century.",
+    "imageUrl": "../../assets/images/places/ChâteauHautBrion.png"
+  },
+  {
+    "id": "maison-veuve-clicquot-7",
+    "name": "Maison Veuve Clicquot",
+    "coordinates": {
+      "latitude": 49.2583,
+      "longitude": 4.0317
+    },
+    "rating": 5,
+    "description": "In the heart of Reims is the legendary champagne producer. The Veuve Clicquot wine cellars stretch for kilometers underground, and tours allow you to learn about the production process and taste different varieties of champagne. The atmosphere here is festive and at the same time sophisticated, and each glass is filled with history.",
+    "interestingFact": "In the 19th century, Madame Clicquot invented the remoulade method, which is still used in the production of champagne.",
+    "imageUrl": "../../assets/images/places/MaisonVeuveClicquot.png"
+  },
+  {
+    "id": "chateau-lafite-rothschild-8",
+    "name": "Château Lafite Rothschild",
+    "coordinates": {
+      "latitude": 45.2055,
+      "longitude": -0.7518
+    },
+    "rating": 5,
+    "description": "One of the most prestigious wine producers in the world, Lafite Rothschild is famous for its aging and exceptional aroma. The castle is surrounded by perfectly arranged vineyards, and the atmosphere here breathes history. Tours include cellar visits and tastings of rare vintages.",
+    "funFact": "Château Lafite Rothschild has been mentioned in documents since the 13th century.",
+    "imageUrl": "../../assets/images/places/ChâteauLafiteRothschild.png"
+  },
+  {
+    "id": "champagne-taittinger-9",
+    "name": "Champagne Taittinger",
+    "coordinates": {
+      "latitude": 49.2428,
+      "longitude": 4.0369
+    },
+    "rating": 5,
+    "description": "A family-run winery with a centuries-old tradition of champagne production. The underground chalk cellars, listed as a UNESCO World Heritage Site, store thousands of bottles that mature in silence and coolness. Tourists can visit the tasting rooms, decorated in an exquisite style, and learn about the history of the Taittinger dynasty.",
+    "funFact": "The Taittinger cellars are located on the site of a former abbey built in the 13th century.",
+    "imageUrl": "../../assets/images/places/ChampagneTaittinger.png"
+  },
+  {
+    "id": "chateau-cheval-blanc-10",
+    "name": "Château Cheval Blanc",
+    "coordinates": {
+      "latitude": 44.904,
+      "longitude": -0.195
+    },
+    "rating": 4,
+    "description": "A renowned producer from the Saint-Émilion region, creating wines with a unique blend of Merlot and Cabernet Franc. The modern winery complex, built by a renowned architect, harmoniously fits into the landscape of ancient vineyards. Personalized tours and exclusive tastings are offered here.",
+    "interestingFact": "Château Cheval Blanc has only 39 hectares of vineyards, but its wines are known all over the world.",
+    "imageUrl": "../../assets/images/places/ChâteauChevalBlanc.png"
+  }
+]

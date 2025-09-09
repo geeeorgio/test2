@@ -1,5 +1,5 @@
 import React from 'react';
-import { Alert, Share, StyleSheet, View } from 'react-native';
+import { Share, StyleSheet, View } from 'react-native';
 import CustomButton from 'src/components/ui/CustomButton';
 import CustomIcon from 'src/components/ui/CustomIcon';
 import CustomText from 'src/components/ui/CustomText';

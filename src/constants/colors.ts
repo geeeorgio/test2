@@ -8,9 +8,11 @@ export const COLORS = {
   accent: '#E0BC46',
 
   gradient: ['#020B65', '#0416CB'],
+  blurGradient: ['transparent', 'rgba(0,0,0,0.7)'],
 
   semiTransparentWhite: 'rgba(255, 255, 255, 0.09)',
-  maxTransparentWhite: 'rgba(255, 255, 255, 0.04)',
+  transparentWhite: 'rgba(255, 255, 255, 0.04)',
+  maxTransparentWhite: 'rgba(255, 255, 255, 0.02)',
 
   shadow: '#000000',
 };
