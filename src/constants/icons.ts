@@ -1,21 +1,30 @@
-import HomeSvg from '../assets/icons/home.svg';
+import { SvgProps } from 'react-native-svg';
+import BackSvg from '../assets/icons/back.svg';
 import FactsSvg from '../assets/icons/bulb.svg';
-import ShareSvg from '../assets/icons/share.svg';
+import CloseSvg from '../assets/icons/close.svg';
+import HomeSvg from '../assets/icons/home.svg';
 import LikeSvg from '../assets/icons/like.svg';
 import LocationSvg from '../assets/icons/location.svg';
 import InfoSvg from '../assets/icons/settings.svg';
+import ShareSvg from '../assets/icons/share.svg';
 import StarSvg from '../assets/icons/star.svg';
-import CloseSvg from '../assets/icons/close.svg';
 
-export const ICONS = {
-  HomeScreen: { component: HomeSvg, type: 'stroke' },
-  FactsScreen: { component: FactsSvg, type: 'stroke' },
-  InfoScreen: { component: InfoSvg, type: 'fill' },
-  SavedScreen: { component: LikeSvg, type: 'stroke' },
-  PlaceScreen: { component: LocationSvg, type: 'fill' },
-  share: { component: ShareSvg, type: 'fill' },
-  star: { component: StarSvg, type: 'fill' },
-  close: { component: CloseSvg, type: 'fill' },
-};
+export interface Icon {
+  name: string;
+  component: React.FC<SvgProps>;
+  type: string;
+}
 
-export type IconNames = keyof typeof ICONS;
+export const ICONS: Icon[] = [
+  { name: 'HomeScreen', component: HomeSvg, type: 'stroke' },
+  { name: 'FactsScreen', component: FactsSvg, type: 'stroke' },
+  { name: 'InfoScreen', component: InfoSvg, type: 'fill' },
+  { name: 'SavedScreen', component: LikeSvg, type: 'stroke' },
+  { name: 'PlaceScreen', component: LocationSvg, type: 'fill' },
+  { name: 'share', component: ShareSvg, type: 'fill' },
+  { name: 'star', component: StarSvg, type: 'fill' },
+  { name: 'close', component: CloseSvg, type: 'fill' },
+  { name: 'back', component: BackSvg, type: 'fill' },
+];
+
+export type IconName = (typeof ICONS)[number]['name'];

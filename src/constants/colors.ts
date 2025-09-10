@@ -13,6 +13,7 @@ export const COLORS = {
   semiTransparentWhite: 'rgba(255, 255, 255, 0.09)',
   transparentWhite: 'rgba(255, 255, 255, 0.04)',
   maxTransparentWhite: 'rgba(255, 255, 255, 0.02)',
+  coordinatesTransparent: 'rgba(255, 255, 255, 0.62)',
 
   shadow: '#000000',
 };

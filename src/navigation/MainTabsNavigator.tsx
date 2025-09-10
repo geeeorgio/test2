@@ -5,8 +5,8 @@ import CustomTabBar from 'src/components/ui/CustomTabBar';
 import FactsScreen from 'src/screens/Facts/FactsScreen';
 import HomeScreen from 'src/screens/Home/HomeScreen';
 import InfoScreen from 'src/screens/Info/InfoScreen';
-import PlaceScreen from 'src/screens/Place/PlaceScreen';
 import SavedScreen from 'src/screens/Saved/SavedScreen';
+import PlacesNavigator from './PlacesNavigator';
 
 const MainTabsNavigator = () => {
   return (
@@ -19,7 +19,7 @@ const MainTabsNavigator = () => {
       tabBar={(props) => <CustomTabBar {...props} />}
     >
       <MainTabs.Screen name="HomeScreen" component={HomeScreen} />
-      <MainTabs.Screen name="PlaceScreen" component={PlaceScreen} />
+      <MainTabs.Screen name="PlaceScreen" component={PlacesNavigator} />
       <MainTabs.Screen name="FactsScreen" component={FactsScreen} />
       <MainTabs.Screen name="SavedScreen" component={SavedScreen} />
       <MainTabs.Screen name="InfoScreen" component={InfoScreen} />

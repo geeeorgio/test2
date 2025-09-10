@@ -1,8 +1,8 @@
 import { COLORS } from 'src/constants/colors';
-import { IconNames, ICONS } from 'src/constants/icons';
+import { IconName, ICONS } from 'src/constants/icons';
 
 interface IconsProps {
-  name: IconNames;
+  name: IconName;
   width: number;
   height: number;
   stroke?: string;
@@ -16,7 +16,7 @@ const CustomIcon = ({
   stroke = COLORS.white,
   fill = COLORS.white,
 }: IconsProps) => {
-  const iconData = ICONS[name];
+  const iconData = ICONS.find((item) => item.name === name);
   if (!iconData) return;
 
   const IconComponent = iconData.component;

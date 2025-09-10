@@ -3,7 +3,7 @@ import { PlatformPressable } from '@react-navigation/elements';
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { COLORS } from 'src/constants/colors';
-import { IconNames } from 'src/constants/icons';
+import { ICONS } from 'src/constants/icons';
 import CustomIcon from '../ui/CustomIcon';
 import GradientContainer from './GradientContainer';
 
@@ -18,7 +18,8 @@ const CustomTabBar = ({
         {state.routes.map((route, index) => {
           const { options } = descriptors[route.key];
           const isFocused = state.index === index;
-          const name = route.name as IconNames;
+
+          const icon = ICONS.find((item) => item.name === route.name);
 
           const onPress = () => {
             const event = navigation.emit({
@@ -49,13 +50,15 @@ const CustomTabBar = ({
               accessibilityState={{ selected: isFocused }}
               accessibilityLabel={options.tabBarAccessibilityLabel}
             >
-              <CustomIcon
-                name={name}
-                width={30}
-                height={30}
-                stroke={isFocused ? COLORS.primaryDark : COLORS.white}
-                fill={isFocused ? COLORS.primaryDark : COLORS.white}
-              />
+              {icon && (
+                <CustomIcon
+                  name={icon.name}
+                  width={30}
+                  height={30}
+                  stroke={isFocused ? COLORS.primaryDark : COLORS.white}
+                  fill={isFocused ? COLORS.primaryDark : COLORS.white}
+                />
+              )}
             </PlatformPressable>
           );
         })}

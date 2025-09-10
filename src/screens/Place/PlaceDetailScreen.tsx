@@ -1,18 +1,28 @@
-import { useRoute } from '@react-navigation/native';
+import { RouteProp, useRoute } from '@react-navigation/native';
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import CustomText from 'src/components/ui/CustomText';
+import { StyleSheet } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import PlaceDetails from 'src/components/ui/PlaceDetails';
+import { PlacesStackParamsList } from 'src/types/navigation';
+
+type PlaceDetailRouteProp = RouteProp<
+  PlacesStackParamsList,
+  'PlaceDetailScreen'
+>;
 
 const PlaceDetailScreen = () => {
-  const route = useRoute();
+  const route = useRoute<PlaceDetailRouteProp>();
+  const { id } = route.params;
 
   return (
-    <View>
-      <CustomText>{route.name}</CustomText>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <PlaceDetails id={id} />
+    </SafeAreaView>
   );
 };
 
 export default PlaceDetailScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: { flex: 1 },
+});

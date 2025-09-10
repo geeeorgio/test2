@@ -3,18 +3,18 @@ import React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
 import { COLORS } from 'src/constants/colors';
 import { Place } from 'src/types/api';
-import { RootStackNavigationProp } from 'src/types/navigation';
+import { PlacesStackNavigationProp } from 'src/types/navigation';
 import CustomButton from './CustomButton';
-import CustomIcon from './CustomIcon';
 import CustomText from './CustomText';
 import GradientContainer from './GradientContainer';
+import PlacesRank from './PlacesRank';
 
 interface PlaceListItemProps {
   item: Place;
 }
 
 const PlaceListItem = ({ item }: PlaceListItemProps) => {
-  const navigation = useNavigation<RootStackNavigationProp>();
+  const navigation = useNavigation<PlacesStackNavigationProp>();
 
   const handleOpen = (id: string) => {
     navigation.navigate('PlaceDetailScreen', { id });
@@ -34,17 +34,7 @@ const PlaceListItem = ({ item }: PlaceListItemProps) => {
         <View style={styles.descriptionContainer}>
           <View style={styles.palceInfo}>
             <CustomText extraStyle={styles.title}>{item.name}</CustomText>
-            <View style={styles.ranking}>
-              {Array.from({ length: 5 }).map((_, index) => (
-                <CustomIcon
-                  key={index}
-                  name="star"
-                  width={17}
-                  height={17}
-                  fill={item.rating > index ? COLORS.accent : COLORS.gray}
-                />
-              ))}
-            </View>
+            <PlacesRank item={item} />
           </View>
           <CustomButton
             extraStyle={styles.btn}
