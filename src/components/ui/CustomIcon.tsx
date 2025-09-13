@@ -1,5 +1,6 @@
 import { COLORS } from 'src/constants/colors';
-import { IconName, ICONS } from 'src/constants/icons';
+import type { IconName } from 'src/constants/icons';
+import { ICONS } from 'src/constants/icons';
 
 interface IconsProps {
   name: IconName;

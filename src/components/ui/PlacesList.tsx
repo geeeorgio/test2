@@ -1,8 +1,11 @@
 import React from 'react';
 import { FlatList, StyleSheet, View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+
 import { COLORS } from 'src/constants/colors';
+
 import DATA from '../../services/data.json';
+
 import PlaceListItem from './PlaceListItem';
 
 const PlacesList = () => {

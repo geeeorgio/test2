@@ -1,5 +1,6 @@
 import React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
+
 import CustomText from 'src/components/ui/CustomText';
 import { COLORS } from 'src/constants/colors';
 

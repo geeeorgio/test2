@@ -1,10 +1,13 @@
-import { StyleSheet, View } from 'react-native';
 import React from 'react';
-import CustomText from 'src/components/ui/CustomText';
+import { StyleSheet, View } from 'react-native';
+
+import type { RouteProp } from '@react-navigation/native';
+import { useRoute } from '@react-navigation/native';
+
 import CustomButton from 'src/components/ui/CustomButton';
 import CustomIcon from 'src/components/ui/CustomIcon';
-import { RouteProp, useRoute } from '@react-navigation/native';
-import { MaterialParamsList } from 'src/types/navigation';
+import CustomText from 'src/components/ui/CustomText';
+import type { MaterialParamsList } from 'src/types/navigation';
 
 type MaterialDetailsRoteProp = RouteProp<MaterialParamsList, 'Details'>;
 

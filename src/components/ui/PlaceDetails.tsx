@@ -1,8 +1,11 @@
 import React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
+
 import { COLORS } from 'src/constants/colors';
 import MaterialTabs from 'src/navigation/MaterialTabs';
+
 import DATA from '../../services/data.json';
+
 import CustomText from './CustomText';
 import GradientContainer from './GradientContainer';
 import PlacesRank from './PlacesRank';
@@ -12,7 +15,7 @@ interface PlaceDetailsProps {
 }
 
 const PlaceDetails = ({ id }: PlaceDetailsProps) => {
-  const item = DATA.find((item) => item.id === id);
+  const item = DATA.find((place) => place.id === id);
   if (!item) {
     return <CustomText>Oups nothing to render</CustomText>;
   }

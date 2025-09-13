@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
+
 import LogoImg from 'src/components/ui/LogoImg';
 
 const Loader = () => {

@@ -1,10 +1,14 @@
-import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
-import { PlatformPressable } from '@react-navigation/elements';
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
+
+import type { BottomTabBarProps } from '@react-navigation/bottom-tabs';
+import { PlatformPressable } from '@react-navigation/elements';
+
 import { COLORS } from 'src/constants/colors';
 import { ICONS } from 'src/constants/icons';
+
 import CustomIcon from '../ui/CustomIcon';
+
 import GradientContainer from './GradientContainer';
 
 const CustomTabBar = ({

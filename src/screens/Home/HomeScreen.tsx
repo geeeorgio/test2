@@ -1,9 +1,11 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import CustomText from 'src/components/ui/CustomText';
+import { View } from 'react-native';
 
+import CustomText from 'src/components/ui/CustomText';
 import GradientContainer from 'src/components/ui/GradientContainer';
 import GuidePannel from 'src/components/ui/GuidePannel';
+
+import { styles } from './styles';
 
 const HomeScreen = () => {
   return (
@@ -20,8 +22,3 @@ const HomeScreen = () => {
 };
 
 export default HomeScreen;
-
-const styles = StyleSheet.create({
-  container: { flex: 1, gap: 24 },
-  mapWrapper: {},
-});

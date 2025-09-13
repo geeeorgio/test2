@@ -1,5 +1,6 @@
 import Layout from 'src/components/layout/Layout';
 import { RootStack } from 'src/types/navigation';
+
 import MainTabsNavigator from './MainTabsNavigator';
 
 const RootNavigator = () => {

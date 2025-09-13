@@ -1,11 +1,14 @@
 import React from 'react';
-import { Share, StyleSheet, View } from 'react-native';
+import { Share, View } from 'react-native';
+
 import CustomButton from 'src/components/ui/CustomButton';
 import CustomIcon from 'src/components/ui/CustomIcon';
 import CustomText from 'src/components/ui/CustomText';
 import GradientContainer from 'src/components/ui/GradientContainer';
 import InfoPannel from 'src/components/ui/InfoPannel';
 import { COLORS } from 'src/constants/colors';
+
+import { styles } from './styles';
 
 const InfoScreen = () => {
   const onShare = async () => {
@@ -25,8 +28,12 @@ const InfoScreen = () => {
       } else if (result.action === Share.dismissedAction) {
         console.log('Closed share window');
       }
-    } catch (error: any) {
-      console.error(error.message);
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        console.error(error.message);
+      } else {
+        console.error(error);
+      }
     }
   };
 
@@ -65,36 +72,3 @@ const InfoScreen = () => {
 };
 
 export default InfoScreen;
-
-const styles = StyleSheet.create({
-  container: { flex: 1 },
-  text: {
-    textAlign: 'right',
-    fontSize: 12,
-    fontWeight: 600,
-  },
-  btnWrapper: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  btns: {
-    flexDirection: 'row',
-    gap: 9,
-    paddingVertical: 34,
-  },
-  share: {
-    flexDirection: 'row',
-    gap: 10,
-    paddingVertical: 16,
-    paddingHorizontal: 33,
-  },
-  rate: {
-    paddingVertical: 16,
-    paddingHorizontal: 33,
-  },
-  btnText: {
-    color: COLORS.black,
-    fontSize: 12,
-    fontWeight: 600,
-  },
-});

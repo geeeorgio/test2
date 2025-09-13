@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
+
 import CustomText from 'src/components/ui/CustomText';
 import GuidePannel from 'src/components/ui/GuidePannel';
 import PlacesList from 'src/components/ui/PlacesList';

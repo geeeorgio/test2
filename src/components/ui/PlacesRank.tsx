@@ -1,7 +1,9 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
+
 import { COLORS } from 'src/constants/colors';
-import { Place } from 'src/types/api';
+import type { Place } from 'src/types/api';
+
 import CustomIcon from './CustomIcon';
 
 interface PlacesRankProps {

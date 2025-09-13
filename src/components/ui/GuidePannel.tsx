@@ -1,6 +1,9 @@
-import React, { ReactNode } from 'react';
+import type { ReactNode } from 'react';
+import React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
+
 import { COLORS } from 'src/constants/colors';
+
 import CustomText from './CustomText';
 import GradientContainer from './GradientContainer';
 

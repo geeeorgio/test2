@@ -1,9 +1,12 @@
-import { RouteProp, useRoute } from '@react-navigation/native';
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+
+import type { RouteProp } from '@react-navigation/native';
+import { useRoute } from '@react-navigation/native';
+
 import PlaceDetails from 'src/components/ui/PlaceDetails';
-import { PlacesStackParamsList } from 'src/types/navigation';
+import type { PlacesStackParamsList } from 'src/types/navigation';
 
 type PlaceDetailRouteProp = RouteProp<
   PlacesStackParamsList,

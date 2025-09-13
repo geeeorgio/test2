@@ -1,11 +1,12 @@
 import React from 'react';
-import { MainTabs } from 'src/types/navigation';
 
 import CustomTabBar from 'src/components/ui/CustomTabBar';
 import FactsScreen from 'src/screens/Facts/FactsScreen';
 import HomeScreen from 'src/screens/Home/HomeScreen';
 import InfoScreen from 'src/screens/Info/InfoScreen';
 import SavedScreen from 'src/screens/Saved/SavedScreen';
+import { MainTabs } from 'src/types/navigation';
+
 import PlacesNavigator from './PlacesNavigator';
 
 const MainTabsNavigator = () => {

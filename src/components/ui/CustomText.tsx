@@ -1,5 +1,8 @@
-import React, { ReactNode } from 'react';
-import { StyleProp, StyleSheet, Text, TextStyle } from 'react-native';
+import type { ReactNode } from 'react';
+import React from 'react';
+import type { StyleProp, TextStyle } from 'react-native';
+import { StyleSheet, Text } from 'react-native';
+
 import { COLORS } from 'src/constants/colors';
 import { FONTS } from 'src/constants/fonts';
 

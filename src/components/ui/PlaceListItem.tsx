@@ -1,9 +1,12 @@
-import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
+
+import { useNavigation } from '@react-navigation/native';
+
 import { COLORS } from 'src/constants/colors';
-import { Place } from 'src/types/api';
-import { PlacesStackNavigationProp } from 'src/types/navigation';
+import type { Place } from 'src/types/api';
+import type { PlacesStackNavigationProp } from 'src/types/navigation';
+
 import CustomButton from './CustomButton';
 import CustomText from './CustomText';
 import GradientContainer from './GradientContainer';

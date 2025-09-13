@@ -1,4 +1,5 @@
-import { SvgProps } from 'react-native-svg';
+import type { SvgProps } from 'react-native-svg';
+
 import BackSvg from '../assets/icons/back.svg';
 import FactsSvg from '../assets/icons/bulb.svg';
 import CloseSvg from '../assets/icons/close.svg';

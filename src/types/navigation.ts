@@ -1,13 +1,9 @@
+import type { MaterialTopTabNavigationProp } from 'node_modules/@react-navigation/material-top-tabs/lib/typescript/src/types';
+
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import {
-  createStackNavigator,
-  StackNavigationProp,
-} from '@react-navigation/stack';
-import {
-  MaterialTopTabNavigationConfig,
-  MaterialTopTabNavigationProp,
-} from 'node_modules/@react-navigation/material-top-tabs/lib/typescript/src/types';
+import type { StackNavigationProp } from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 
 // Onboarding
 export type OnboardingParamsList = {

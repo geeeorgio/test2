@@ -1,11 +1,8 @@
-import React, { ReactNode } from 'react';
-import {
-  Pressable,
-  StyleSheet,
-  Insets,
-  StyleProp,
-  ViewStyle,
-} from 'react-native';
+import type { ReactNode } from 'react';
+import React from 'react';
+import type { Insets, StyleProp, ViewStyle } from 'react-native';
+import { Pressable, StyleSheet } from 'react-native';
+
 import { COLORS } from 'src/constants/colors';
 
 interface CustomButtonProps {

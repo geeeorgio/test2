@@ -1,6 +1,9 @@
-import React, { ReactNode } from 'react';
-import { StyleProp, StyleSheet, ViewStyle } from 'react-native';
+import type { ReactNode } from 'react';
+import React from 'react';
+import type { StyleProp, ViewStyle } from 'react-native';
+import { StyleSheet } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+
 import { COLORS } from 'src/constants/colors';
 
 interface GradientContainerProps {
